@@ -40,3 +40,39 @@ pub fn part_two(raw_input: Vec<String>) -> Option<i64> {
 
     None
 }
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_find_two_sum() {
+        let nums_vec = vec![1721, 979, 366, 299, 675, 1456];
+        assert_eq!(find_two_sum(nums_vec, 2020), Some((0 as usize, 3 as usize)));
+    }
+    #[test]
+    fn test_part_one() {
+        // Your puzzle answer was 1016131.
+        let nums_vec = vec![
+            "1721".to_string(),
+            "979".to_string(),
+            "366".to_string(),
+            "299".to_string(),
+            "675".to_string(),
+            "1456".to_string(),
+        ];
+        assert_eq!(part_one(nums_vec), Some(514579 as i32));
+    }
+    #[test]
+    fn test_part_two() {
+        // Your puzzle answer was 276432018.
+        let nums_vec = vec![
+            "1721".to_string(),
+            "979".to_string(),
+            "366".to_string(),
+            "299".to_string(),
+            "675".to_string(),
+            "1456".to_string(),
+        ];
+        assert_eq!(part_two(nums_vec), Some(241861950 as i64));
+    }
+}
